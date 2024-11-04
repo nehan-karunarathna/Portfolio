@@ -1,0 +1,161 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #201f1f;
+    color: #333;
+}
+
+header, footer {
+    background: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 1em 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow */
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    font-size: large;
+    
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s; /* Transition */
+}
+
+nav ul li a:hover {
+    color: #555; /* User action pseudo class */
+    display: inline;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+    color: #ffffff;
+}
+
+aside {
+    background: rgba(0, 0, 0, 0.1); /* Semi-transparent color */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px; /* Rounded corners */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Shadow */
+}
+
+form button {
+    margin-top: 10px;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s; /* Transition */
+}
+
+form button:hover {
+    background: #555;
+}
+
+form input:invalid {
+    border-color: red; /* Validity pseudo class */
+}
+
+form input:valid {
+    border-color: green; /* Validity pseudo class */
+}
+
+nav ul li:first-child {
+    font-weight: bold; /* Child combinator */
+}
+
+nav ul li:last-child {
+    font-style: italic; /* Child combinator */
+}
+
+
+nav ul li:not(:first-child) a {
+    color: #1900ff; /* Negation pseudo class */
+}
+
+header::before {
+    content: "🚀 "; /* Pseudo element with generated content */
+}
+
+footer::after {
+    content: " 🌟";
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+h1, h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Text effects */
+}
+
+header {
+    background: linear-gradient(45deg, #333, #555); /* Gradient */
+}
+
+aside:hover {
+    transform: scale(1.03); /* Transform */
+    transition: transform 0.3s; /* Transition */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+main {
+    animation: fadeIn 1s ease-in-out; /* Animation */
+}
+
+/* Attribute selectors */
+a[href^="https://"] {
+    color: #1a0dab;
+}
+
+a[href$=".html"] {
+    color: #007BFF;
+}
